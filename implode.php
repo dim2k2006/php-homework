@@ -5,7 +5,14 @@ $string = implode(" ", $array);
 echo $string."<br>";
 
 //собственная реализация
-for ($i=0; $i < count($array) ; $i++) { 
-	echo $array[$i]." ";
+function my_implode (array $array, $separator) {
+	$html ="";
+	for ($i=0; $i < count($array) ; $i++) { 
+		$html .= $array[$i].$separator;
+	}
+	return $html;
 }
+
+
+echo my_implode ($array, $separator = " ");
 
