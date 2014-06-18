@@ -9,7 +9,7 @@ if (!defined('_ENCRYPT_KEY')) define('_ENCRYPT_KEY', 280591);
 */
 function data_encrypt ($sourceFile, $outPutFile) {
 	if (file_exists($sourceFile)) {
-		$string = file_get_contents('source.txt');
+		$string = file_get_contents($sourceFile);
 		$array = str_split($string);
 		$encString = "";
 	
